@@ -80,13 +80,11 @@
 # =============================================================================
 
 def add_task(tasks):
-    """Prompt the user to enter a task and add it to the list."""
     task = input("Enter task: ")
     tasks.append(task)
     print(f'Task added: "{task}"')
 
 def view_tasks(tasks):
-    """Display all tasks in the list."""
     if not tasks:
         print("Your Tasks: (none)")
     else:
@@ -95,7 +93,6 @@ def view_tasks(tasks):
             print(f" {i}. {task}")
 
 def delete_task(tasks):
-    """Remove a task from the list based on its number."""
     view_tasks(tasks)
     if tasks:
         try:
@@ -109,7 +106,6 @@ def delete_task(tasks):
             print("Please enter a valid number.")
 
 def show_menu():
-    """Display the main menu."""
     print("\n============================")
     print("     TO-DO LIST MENU")
     print("============================")
@@ -120,7 +116,6 @@ def show_menu():
     return input("Enter your choice (1-4): ")
 tasks = []
 def main():
-    """Main function to run the to-do list application."""
     while True:
         choice = show_menu()
         if choice == '1':
