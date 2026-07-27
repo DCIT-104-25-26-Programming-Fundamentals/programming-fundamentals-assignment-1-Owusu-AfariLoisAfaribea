@@ -91,11 +91,9 @@
 # =============================================================================
 
 def add_student(students):
-    """Prompt the user to enter a student's name, ID, and scores, then add the student record."""
     name = input("Student name: ")
     student_id = input("Student ID: ")
     
-    # Check if the student ID already exists
     for student in students:
         if student["id"] == student_id:
             print(f"Error: Student ID {student_id} already exists.")
@@ -117,7 +115,6 @@ def add_student(students):
     print(f'Student "{name}" added successfully.')
 
 def display_students(students):
-    """Display all student records in a formatted table."""
     if not students:
         print("No students to display.")
         return
@@ -132,7 +129,6 @@ def display_students(students):
     print("--------------------------------------------------")
 
 def calculate_average(students):
-    """Calculate the average score for a specific student."""
     student_id = input("Enter student ID: ")
     for student in students:
         if student["id"] == student_id:
@@ -141,7 +137,6 @@ def calculate_average(students):
             return
     print(f"Error: Student ID {student_id} not found.")
 def main():
-    """Main function to run the student record management system."""
     students = []
     while True:
         print("\n===============================")
