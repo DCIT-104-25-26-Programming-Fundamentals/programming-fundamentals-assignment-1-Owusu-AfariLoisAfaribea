@@ -50,7 +50,6 @@
 # =============================================================================
 
 def fibonacci_sequence(n):
-    """Generate the first n terms of the Fibonacci sequence."""
     if n <= 0:
         print("Error: N must be a positive integer.")
         return []
@@ -62,7 +61,6 @@ def fibonacci_sequence(n):
         a, b = b, a + b
     return sequence
 def is_fibonacci_number(num):
-    """Check if a number is a Fibonacci number."""
     if num < 0:
         return False
     
